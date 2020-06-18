@@ -10,7 +10,7 @@ title: Seed configurations
 ```yml
 
 seeds:
-  [<resource-path>](resource_path):
+  [<resource-path>](resource-path):
     [quote_columns](resource-configs/quote_columns): true | false
     [column_types](resource-configs/column_types): {column_name: datatype}
 
@@ -26,7 +26,7 @@ seeds:
 ```yml
 
 seeds:
-  [<resource-path>](resource_path):
+  [<resource-path>](resource-path):
     [enabled](resource-configs/enabled): true | false
     [schema](resource-configs/schema): string
     [database](resource-configs/database): string

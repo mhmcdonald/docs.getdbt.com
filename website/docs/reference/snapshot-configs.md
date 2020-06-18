@@ -28,7 +28,7 @@ Parts of a snapshot:
 
 ```yaml
 snapshots:
-  [<resource_path>](resource_path):
+  [<resource_path>](resource-path):
     [target_schema](target_schema): <string>
     [target_database](target_database): <string>
     [unique_key](unique_key): <column_name_or_expression>
@@ -82,7 +82,7 @@ snapshots:
 
 ```yaml
 snapshots:
-  [<resource_path>](resource_path):
+  [<resource_path>](resource-path):
     [enabled](enabled): true | false
     [tags](tags): <string> | [<string>]
     [pre-hook](pre-hook): <sql-statement> | [<sql-statement>]
