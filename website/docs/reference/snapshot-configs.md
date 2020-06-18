@@ -24,22 +24,26 @@ Parts of a snapshot:
 }>
 <TabItem value="yaml">
 
+<File name='dbt_project.yml'>
 
 ```yaml
-[target_schema](target_schema): <string>
-[target_database](target_database): <string>
-[unique_key](unique_key): <column_name_or_expression>
-[strategy](strategy): timestamp | check
-[updated_at](updated_at): <column_name>
-[check_cols](check_cols): [<column_name>] | all
+snapshots:
+  [<resource_path>](resource_path):
+    [target_schema](target_schema): <string>
+    [target_database](target_database): <string>
+    [unique_key](unique_key): <column_name_or_expression>
+    [strategy](strategy): timestamp | check
+    [updated_at](updated_at): <column_name>
+    [check_cols](check_cols): [<column_name>] | all
 
 ```
+
+</File>
 
 </TabItem>
 
 
 <TabItem value="config">
-
 
 
 ```jinja
@@ -74,19 +78,23 @@ Parts of a snapshot:
 <TabItem value="yaml">
 
 
+<File name='dbt_project.yml'>
+
 ```yaml
-[enabled](enabled): true | false
-[tags](tags): <string> | [<string>]
-[pre-hook](pre-hook): <sql-statement> | [<sql-statement>]
-[post-hook](post-hook): <sql-statement> | [<sql-statement>]
+snapshots:
+  [<resource_path>](resource_path):
+    [enabled](enabled): true | false
+    [tags](tags): <string> | [<string>]
+    [pre-hook](pre-hook): <sql-statement> | [<sql-statement>]
+    [post-hook](post-hook): <sql-statement> | [<sql-statement>]
+    [persist_docs](persist_docs): {<dict>}
 
 ```
+</File>
 
 </TabItem>
 
-
 <TabItem value="config">
-
 
 
 ```jinja
@@ -95,18 +103,15 @@ Parts of a snapshot:
     [enabled](enabled)=true | false,
     [tags](tags)="<string>" | ["<string>"],
     [pre_hook](pre-hook)="<sql-statement>" | ["<sql-statement>"],
-    [post_hook](post-hook)="<sql-statement>" | ["<sql-statement>"]
+    [post_hook](post-hook)="<sql-statement>" | ["<sql-statement>"],
+    [persist_docs](persist_docs)={<dict>}
 ) }}
 
 ```
 
-
 </TabItem>
 
 </Tabs>
-
-
-
 
 
 ## Configuring snapshots
