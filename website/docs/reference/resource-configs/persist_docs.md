@@ -16,6 +16,19 @@ datatype: Dict[Str, Bool]
 
 <TabItem value="models">
 
+<File name='dbt_project.yml'>
+
+```yml
+models:
+  [<resource-path>](resource-path):
+    persist_docs:
+      relation: true
+      columns: true
+
+```
+
+</File>
+
 <File name='models/<modelname>.sql'>
 
 ```sql
@@ -25,19 +38,6 @@ datatype: Dict[Str, Bool]
 ) }}
 
 select ...
-
-```
-
-</File>
-
-<File name='dbt_project.yml'>
-
-```yml
-models:
-  [<resource-path>](resource-path):
-    persist_docs:
-      relation: true
-      columns: true
 
 ```
 
@@ -70,6 +70,19 @@ seeds:
 
 <TabItem value="snapshots">
 
+<File name='dbt_project.yml'>
+
+```yml
+snapshots:
+  [<resource-path>](resource-path):
+    persist_docs:
+      relation: true
+      columns: true
+
+```
+
+</File>
+
 <File name='snapshots/<filename>.sql'>
 
 ```sql
@@ -82,19 +95,6 @@ seeds:
 select ...
 
 {% endsnapshot %}
-
-```
-
-</File>
-
-<File name='dbt_project.yml'>
-
-```yml
-snapshots:
-  [<resource-path>](resource-path):
-    persist_docs:
-      relation: true
-      columns: true
 
 ```
 
